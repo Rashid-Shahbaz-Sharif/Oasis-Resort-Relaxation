@@ -1,0 +1,30 @@
+
+// Sticky Header
+let nav = document.querySelector(".navigation-wrap");
+
+window.onscroll = function () {
+    // Check if viewport width is greater than or equal to 992px
+    if (window.innerWidth >= 992) {
+        if (document.documentElement.scrollTop > 20) {
+            nav.classList.add("scroll-on");
+        } else {
+            nav.classList.remove("scroll-on");
+        }
+    } else {
+        // Remove scroll-on class if viewport width is less than 992px
+        nav.classList.add("scroll-on");
+    }
+}
+
+
+
+// Change Header Menu-Icon
+let changeIcon = function (icon) {
+  icon.classList.toggle("fa-times");
+};
+changeIcon = (icon) => icon.classList.toggle("fa-times");
+
+ 
+
+   
+
